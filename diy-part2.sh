@@ -17,3 +17,5 @@ git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall-package
 rm -rf feeds/packages/net/sing-box
 cp -rf /tmp/passwall-packages/sing-box feeds/packages/net/sing-box
 rm -rf /tmp/passwall-packages
+
+sed -i "s/%D %V, %C/%D %V, %C (Built on $(TZ='Asia/Shanghai' date +"%Y.%m.%d"))/g" package/base-files/files/etc/banner
