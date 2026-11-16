@@ -22,5 +22,5 @@ rm -rf /tmp/passwall-packages
 # Modify the revision number at the end of "Status -> Overview -> Firmware Version" in the web backend by appending the date (in Beijing Time)
 sed -i "s/%R/%R ($(TZ='Asia/Shanghai' date +"%Y.%m.%d"))/g" package/base-files/files/etc/openwrt_release
 
-# 修改 SSH 登录时的欢迎界面标签
+# Modify the welcome screen banner for SSH logins
 sed -i "s/%D %V, %C/%D %V, %C (Built on $(TZ='Asia/Shanghai' date +"%Y.%m.%d"))/g" package/base-files/files/etc/banner
