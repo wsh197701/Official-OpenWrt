@@ -19,7 +19,7 @@ rm -rf feeds/packages/net/sing-box
 cp -rf /tmp/passwall-packages/sing-box feeds/packages/net/sing-box
 rm -rf /tmp/passwall-packages
 
-# 修改网页后台“状态 -> 概览 -> 固件版本”末尾的修订号，追加北京时间日期
+# Modify the revision number at the end of "Status -> Overview -> Firmware Version" in the web backend by appending the date (in Beijing Time)
 sed -i "s/%R/%R ($(TZ='Asia/Shanghai' date +"%Y.%m.%d"))/g" package/base-files/files/etc/openwrt_release
 
 # 修改 SSH 登录时的欢迎界面标签
